@@ -26,7 +26,7 @@ Brick::Application.configure do
 
   # Mailer
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = "localhost:3000"
+  config.action_mailer.default_url_options = { : => ENV["recappten.herokuapp.com"] }
   config.action_mailer.smtp_settings = {
     address: ENV["smtp.live.nl"],
     port: ENV["465"],
