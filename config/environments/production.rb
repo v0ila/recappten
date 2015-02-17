@@ -85,7 +85,7 @@ Brick::Application.configure do
   config.action_mailer.smtp_settings = {
     address: ENV["smtp-mail.outlook.com"],
     openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE,
-    port: ENV["587"]
+    port: ENV["587"],
     domain: ENV["mail.outlook.com"],
     authentication: "plain",
     user_name: ENV["wesley_@live.nl"],
