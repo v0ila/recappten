@@ -55,7 +55,7 @@ Brick::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  # config.action_controller.asset_host = "http://assets.example.com"
+  #config.action_controller.asset_ = "http://assets.example.com"
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
@@ -80,14 +80,13 @@ Brick::Application.configure do
 
   # Mailer
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => ENV["recappten.herokuapp.com"] }
+  config.action_mailer.default_url_options = { : => ENV["recappten.herokuapp.com"] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: ENV["smtp-mail.outlook.com"],
     openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE,
     port: ENV["587"],
     domain: ENV["mail.outlook.com"],
-    authentication: "plain",
     user_name: ENV["wesley_@live.nl"],
     password: ENV["@1WeSlEy"]
   }
