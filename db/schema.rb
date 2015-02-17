@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 20141010133702) do
     t.string   "username",               default: "",    null: false
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
-    t.boolean  "admin",                  default: false, null: false
     t.boolean  "locked",                 default: false, null: false
     t.string   "slug"
     t.string   "reset_password_token"

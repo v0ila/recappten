@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  devise :database_authenticatable, :confirmable
   # Use friendly_id on Users
   extend FriendlyId
   friendly_id :friendify, use: :slugged
@@ -11,7 +12,7 @@ class User < ActiveRecord::Base
       "#{username}"
     end
   end
-  
+
 # Relations
 has_many :posts
 

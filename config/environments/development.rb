@@ -32,7 +32,7 @@ Brick::Application.configure do
     address: ENV["smtp.live.nl"],
     port: ENV["465"],
     domain: ENV["mail.live.com"],
-    user_name: ENV["wesley_l"],
+    user_name: ENV["wesley_@live.nl"],
     password: ENV["@1WeSlEy"]
   }
 end

@@ -63,7 +63,7 @@ Brick::Application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-   config.action_mailer.raise_delivery_errors = true
+  #  config.action_mailer.raise_delivery_errors = true
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
@@ -80,16 +80,15 @@ Brick::Application.configure do
 
   # Mailer
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => ENV["DOMAIN"] }
+  config.action_mailer.default_url_options = { :host => ENV["recappten.herokuapp.com"] }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: ENV["smtp.live.com"],
+    address: ENV["smtp-mail.outlook.com"],
     openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE,
-    port: ENV["465"].to_i,
-    domain: ENV["mail.live.com"],
+    port: ENV["587"]
+    domain: ENV["mail.outlook.com"],
     authentication: "plain",
-    enable_starttls_auto: true,
-    user_name: ENV["wesley_"],
+    user_name: ENV["wesley_@live.nl"],
     password: ENV["@1WeSlEy"]
   }
 end
