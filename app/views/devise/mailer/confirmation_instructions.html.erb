@@ -1,0 +1,12 @@
+<p>Welkom <%= @user.username.capitalize %>!</p>
+
+<p>Bevestig uw account door op de onderstaande link te klikken:</p>
+
+<p><%= link_to 'Bevestig mijn account', confirmation_url(@resource, :confirmation_token => @token) %></p>
+<br/>
+
+<p>
+  Groeten,<br/><br/>
+  Wesley van der Molen<br/>
+  <%= link_to "RECAPPT", "www.recappten.nl" %>
+</p>
